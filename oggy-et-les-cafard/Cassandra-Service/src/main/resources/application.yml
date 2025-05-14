@@ -1,0 +1,12 @@
+spring:
+  cassandra:
+    contact-points: cassandra
+    port: 9042
+    keyspace-name: chatbot
+    local-datacenter: datacenter1
+    schema-action: create_if_not_exists
+    password: cassandra
+    username: cassandra
+
+server:
+  port: 8999

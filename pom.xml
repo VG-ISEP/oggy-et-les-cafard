@@ -11,12 +11,11 @@
     <groupId>com.example</groupId>
     <artifactId>oggy-et-les-cafard</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>demo</description>
+    <name>oggy-et-les-cafard</name>
+    <description>oggy-et-les-cafards</description>
     <modules>
-        <module>Cassandra-Service</module>
+        <module>oggy-et-les-cafard</module>
     </modules>
-
     <url/>
     <licenses>
         <license/>
