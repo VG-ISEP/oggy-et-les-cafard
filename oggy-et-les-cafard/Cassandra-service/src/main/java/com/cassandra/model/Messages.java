@@ -15,17 +15,15 @@ public class Messages {
     private String userName;
     private String userSurname;
     private LocalDate dateOfBirth;
-    private String username;
     private String email;
     private String password;
     private Long timestamp;
 
-    public Messages(UUID userId, String userName, String userSurname, LocalDate dateOfBirth, String username, String email, String password, Long timestamp) {
+    public Messages(UUID userId, String userName, String userSurname, LocalDate dateOfBirth, String email, String password, Long timestamp) {
         this.userId = userId;
         this.userName = userName;
         this.userSurname = userSurname;
         this.dateOfBirth = dateOfBirth;
-        this.username = username;
         this.email = email;
         setPassword(password);
         this.timestamp = timestamp;
@@ -70,14 +68,6 @@ public class Messages {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public UUID getUserId() {

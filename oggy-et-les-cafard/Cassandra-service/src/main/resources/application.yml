@@ -1,0 +1,12 @@
+spring:
+  cassandra:
+    contact-points: localhost
+    port: 9044
+    keyspace-name: hingage
+    local-datacenter: datacenter1
+    schema-action: create_if_not_exists
+    password: cassandra
+    username: cassandra
+
+server:
+  port: 8124
