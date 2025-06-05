@@ -29,3 +29,4 @@ public class Conversations {
 
     private Long startedAt;
 }
+
