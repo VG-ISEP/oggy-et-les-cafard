@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class FriendshipService {
@@ -20,7 +21,7 @@ public class FriendshipService {
         Optional<Friendship> existing = friendshipRepository.findByRequesterAndReceiver(from, to);
 
         if (existing.isPresent()) {
-            return existing.get();
+            return existing.get(); // ou update le status si besoin
         }
 
         Friendship friendship = new Friendship();
@@ -63,6 +64,10 @@ public class FriendshipService {
 
     public List<Friendship> getSentRequests(Users user) {
         return friendshipRepository.findByRequester(user);
+    }
+
+    public Optional<Friendship> getFriendshipById(UUID id) {
+        return friendshipRepository.findById(id);
     }
 
     public Optional<Friendship> getFriendshipBetween(Users a, Users b) {
