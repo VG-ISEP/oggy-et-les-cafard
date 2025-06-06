@@ -27,6 +27,12 @@ services:
       - pgadmin:/var/lib/pgadmin
     ports:
       - "${PGADMIN_PORT:-5050}:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.hingage-pgadmin.rule=Host(`hingage-pgadmin.muchosalexis.fr`)"
+      - "traefik.http.routers.hingage-pgadmin.entrypoints=websecure"
+      - "traefik.http.routers.hingage-pgadmin.tls.certresolver=cloudflare"
+      - "traefik.http.services.hingage-pgadmin.loadbalancer.server.port=80"
     networks:
       - postgres
     restart: unless-stopped
@@ -46,13 +52,19 @@ services:
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
     ports:
       - "8080:8080"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.hingage-backend.rule=Host(`hingage-backend.muchosalexis.fr`)"
+      - "traefik.http.routers.hingage-backend.entrypoints=websecure"
+      - "traefik.http.routers.hingage-backend.tls.certresolver=cloudflare"
+      - "traefik.http.services.hingage-backend.loadbalancer.server.port=8080"
     networks:
       - postgres
     restart: unless-stopped
 
 networks:
   postgres:
-    driver: bridge
+    external: true
 
 volumes:
   postgres:
