@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>oggy.et.les.cafard</groupId>
-    <artifactId>Cassandra-service</artifactId>
+    <artifactId>Postgres-Service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Cassandra-service</name>
     <description>Cassandra-service</description>
@@ -119,6 +119,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.cassandra.CassandraServiceApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

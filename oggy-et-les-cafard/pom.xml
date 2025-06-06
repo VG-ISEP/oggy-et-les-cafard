@@ -12,7 +12,7 @@
     <description>oggy-et-les-cafard-back</description>
 
     <modules>
-        <module>Cassandra-service</module>
+        <module>Postgres-Service</module>
     </modules>
 
     <parent>
