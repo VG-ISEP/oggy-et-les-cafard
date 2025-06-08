@@ -1,0 +1,42 @@
+.user-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .user-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .user-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-card h2 {
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .user-card p {
+    color: #666;
+    min-height: 40px;
+  }
+  
+  .user-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+  
+  .user-card a:hover {
+    background-color: #555;
+  } 
