@@ -1,0 +1,63 @@
+.event-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .event-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1.5rem;
+  }
+  
+  .event-card h2 {
+    margin-top: 0;
+  }
+  
+  .event-card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .event-card button:hover {
+    background-color: #555;
+  }
+  
+  .event-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .event-button.join {
+    background-color: #4caf50; /* Green */
+    color: white;
+  }
+  
+  .event-button.join:hover {
+    background-color: #45a049;
+  }
+  
+  .event-button.join:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .event-button.leave {
+    background-color: #f44336; /* Red */
+    color: white;
+  }
+  
+  .event-button.leave:hover {
+    background-color: #da190b;
+  } 
