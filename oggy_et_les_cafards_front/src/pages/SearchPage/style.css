@@ -1,0 +1,19 @@
+.search-filters {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .search-filters label {
+    font-weight: bold;
+  }
+  
+  .search-filters input,
+  .search-filters select {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+  } 
